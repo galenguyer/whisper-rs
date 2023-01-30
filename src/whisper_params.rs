@@ -1,16 +1,15 @@
-use std::ffi::{c_int, CString};
+use std::ffi::{c_int, CString, c_float};
 use std::marker::PhantomData;
 use whisper_rs_sys::whisper_token;
 
 pub enum SamplingStrategy {
     Greedy {
-        n_past: c_int,
+        best_of: c_int,
     },
     /// not implemented yet, results of using this unknown
     BeamSearch {
-        n_past: c_int,
-        beam_width: c_int,
-        n_best: c_int,
+        beam_size: c_int,
+        patience: c_float,
     },
 }
 
@@ -35,17 +34,15 @@ impl<'a, 'b> FullParams<'a, 'b> {
         };
 
         match sampling_strategy {
-            SamplingStrategy::Greedy { n_past } => {
-                fp.greedy.n_past = n_past;
+            SamplingStrategy::Greedy { best_of } => {
+                fp.greedy.best_of = best_of;
             }
             SamplingStrategy::BeamSearch {
-                n_past,
-                beam_width,
-                n_best,
+                beam_size,
+                patience
             } => {
-                fp.beam_search.n_past = n_past;
-                fp.beam_search.beam_width = beam_width;
-                fp.beam_search.n_best = n_best;
+                fp.beam_search.beam_size = beam_size;
+                fp.beam_search.patience = patience;
             }
         }
 

@@ -2,53 +2,75 @@
 
 pub const _STDINT_H: u32 = 1;
 pub const _FEATURES_H: u32 = 1;
+pub const _ISOC95_SOURCE: u32 = 1;
+pub const _ISOC99_SOURCE: u32 = 1;
+pub const _ISOC11_SOURCE: u32 = 1;
+pub const _ISOC2X_SOURCE: u32 = 1;
+pub const _POSIX_SOURCE: u32 = 1;
+pub const _POSIX_C_SOURCE: u32 = 200809;
+pub const _XOPEN_SOURCE: u32 = 700;
+pub const _XOPEN_SOURCE_EXTENDED: u32 = 1;
+pub const _LARGEFILE64_SOURCE: u32 = 1;
 pub const _DEFAULT_SOURCE: u32 = 1;
-pub const __GLIBC_USE_ISOC2X: u32 = 0;
+pub const _ATFILE_SOURCE: u32 = 1;
+pub const _DYNAMIC_STACK_SIZE_SOURCE: u32 = 1;
+pub const __GLIBC_USE_ISOC2X: u32 = 1;
 pub const __USE_ISOC11: u32 = 1;
 pub const __USE_ISOC99: u32 = 1;
 pub const __USE_ISOC95: u32 = 1;
-pub const __USE_POSIX_IMPLICITLY: u32 = 1;
-pub const _POSIX_SOURCE: u32 = 1;
-pub const _POSIX_C_SOURCE: u32 = 200809;
+pub const __USE_ISOCXX11: u32 = 1;
 pub const __USE_POSIX: u32 = 1;
 pub const __USE_POSIX2: u32 = 1;
 pub const __USE_POSIX199309: u32 = 1;
 pub const __USE_POSIX199506: u32 = 1;
 pub const __USE_XOPEN2K: u32 = 1;
 pub const __USE_XOPEN2K8: u32 = 1;
-pub const _ATFILE_SOURCE: u32 = 1;
-pub const __USE_MISC: u32 = 1;
-pub const __USE_ATFILE: u32 = 1;
-pub const __USE_FORTIFY_LEVEL: u32 = 0;
-pub const __GLIBC_USE_DEPRECATED_GETS: u32 = 0;
-pub const __GLIBC_USE_DEPRECATED_SCANF: u32 = 0;
-pub const _STDC_PREDEF_H: u32 = 1;
-pub const __STDC_IEC_559__: u32 = 1;
-pub const __STDC_IEC_559_COMPLEX__: u32 = 1;
-pub const __STDC_ISO_10646__: u32 = 201706;
-pub const __GNU_LIBRARY__: u32 = 6;
-pub const __GLIBC__: u32 = 2;
-pub const __GLIBC_MINOR__: u32 = 31;
-pub const _SYS_CDEFS_H: u32 = 1;
-pub const __glibc_c99_flexarr_available: u32 = 1;
+pub const __USE_XOPEN: u32 = 1;
+pub const __USE_XOPEN_EXTENDED: u32 = 1;
+pub const __USE_UNIX98: u32 = 1;
+pub const _LARGEFILE_SOURCE: u32 = 1;
+pub const __USE_XOPEN2K8XSI: u32 = 1;
+pub const __USE_XOPEN2KXSI: u32 = 1;
+pub const __USE_LARGEFILE: u32 = 1;
+pub const __USE_LARGEFILE64: u32 = 1;
 pub const __WORDSIZE: u32 = 64;
 pub const __WORDSIZE_TIME64_COMPAT32: u32 = 1;
 pub const __SYSCALL_WORDSIZE: u32 = 64;
-pub const __LONG_DOUBLE_USES_FLOAT128: u32 = 0;
-pub const __HAVE_GENERIC_SELECTION: u32 = 1;
-pub const __GLIBC_USE_LIB_EXT2: u32 = 0;
-pub const __GLIBC_USE_IEC_60559_BFP_EXT: u32 = 0;
-pub const __GLIBC_USE_IEC_60559_BFP_EXT_C2X: u32 = 0;
-pub const __GLIBC_USE_IEC_60559_FUNCS_EXT: u32 = 0;
-pub const __GLIBC_USE_IEC_60559_FUNCS_EXT_C2X: u32 = 0;
-pub const __GLIBC_USE_IEC_60559_TYPES_EXT: u32 = 0;
-pub const _BITS_TYPES_H: u32 = 1;
 pub const __TIMESIZE: u32 = 64;
+pub const __USE_MISC: u32 = 1;
+pub const __USE_ATFILE: u32 = 1;
+pub const __USE_DYNAMIC_STACK_SIZE: u32 = 1;
+pub const __USE_GNU: u32 = 1;
+pub const __USE_FORTIFY_LEVEL: u32 = 0;
+pub const __GLIBC_USE_DEPRECATED_GETS: u32 = 1;
+pub const __GLIBC_USE_DEPRECATED_SCANF: u32 = 0;
+pub const _STDC_PREDEF_H: u32 = 1;
+pub const __STDC_IEC_559__: u32 = 1;
+pub const __STDC_IEC_60559_BFP__: u32 = 201404;
+pub const __STDC_IEC_559_COMPLEX__: u32 = 1;
+pub const __STDC_IEC_60559_COMPLEX__: u32 = 201404;
+pub const __STDC_ISO_10646__: u32 = 201706;
+pub const __GNU_LIBRARY__: u32 = 6;
+pub const __GLIBC__: u32 = 2;
+pub const __GLIBC_MINOR__: u32 = 36;
+pub const _SYS_CDEFS_H: u32 = 1;
+pub const __glibc_c99_flexarr_available: u32 = 1;
+pub const __LDOUBLE_REDIRECTS_TO_FLOAT128_ABI: u32 = 0;
+pub const __HAVE_GENERIC_SELECTION: u32 = 0;
+pub const __GLIBC_USE_LIB_EXT2: u32 = 1;
+pub const __GLIBC_USE_IEC_60559_BFP_EXT: u32 = 1;
+pub const __GLIBC_USE_IEC_60559_BFP_EXT_C2X: u32 = 1;
+pub const __GLIBC_USE_IEC_60559_EXT: u32 = 1;
+pub const __GLIBC_USE_IEC_60559_FUNCS_EXT: u32 = 1;
+pub const __GLIBC_USE_IEC_60559_FUNCS_EXT_C2X: u32 = 1;
+pub const __GLIBC_USE_IEC_60559_TYPES_EXT: u32 = 1;
+pub const _BITS_TYPES_H: u32 = 1;
 pub const _BITS_TYPESIZES_H: u32 = 1;
 pub const __OFF_T_MATCHES_OFF64_T: u32 = 1;
 pub const __INO_T_MATCHES_INO64_T: u32 = 1;
 pub const __RLIM_T_MATCHES_RLIM64_T: u32 = 1;
 pub const __STATFS_MATCHES_STATFS64: u32 = 1;
+pub const __KERNEL_OLD_TIMEVAL_MATCHES_TIMEVAL64: u32 = 1;
 pub const __FD_SETSIZE: u32 = 1024;
 pub const _BITS_TIME64_H: u32 = 1;
 pub const _BITS_WCHAR_H: u32 = 1;
@@ -91,14 +113,88 @@ pub const SIG_ATOMIC_MAX: u32 = 2147483647;
 pub const SIZE_MAX: i32 = -1;
 pub const WINT_MIN: u32 = 0;
 pub const WINT_MAX: u32 = 4294967295;
-pub const true_: u32 = 1;
-pub const false_: u32 = 0;
+pub const INT8_WIDTH: u32 = 8;
+pub const UINT8_WIDTH: u32 = 8;
+pub const INT16_WIDTH: u32 = 16;
+pub const UINT16_WIDTH: u32 = 16;
+pub const INT32_WIDTH: u32 = 32;
+pub const UINT32_WIDTH: u32 = 32;
+pub const INT64_WIDTH: u32 = 64;
+pub const UINT64_WIDTH: u32 = 64;
+pub const INT_LEAST8_WIDTH: u32 = 8;
+pub const UINT_LEAST8_WIDTH: u32 = 8;
+pub const INT_LEAST16_WIDTH: u32 = 16;
+pub const UINT_LEAST16_WIDTH: u32 = 16;
+pub const INT_LEAST32_WIDTH: u32 = 32;
+pub const UINT_LEAST32_WIDTH: u32 = 32;
+pub const INT_LEAST64_WIDTH: u32 = 64;
+pub const UINT_LEAST64_WIDTH: u32 = 64;
+pub const INT_FAST8_WIDTH: u32 = 8;
+pub const UINT_FAST8_WIDTH: u32 = 8;
+pub const INT_FAST16_WIDTH: u32 = 64;
+pub const UINT_FAST16_WIDTH: u32 = 64;
+pub const INT_FAST32_WIDTH: u32 = 64;
+pub const UINT_FAST32_WIDTH: u32 = 64;
+pub const INT_FAST64_WIDTH: u32 = 64;
+pub const UINT_FAST64_WIDTH: u32 = 64;
+pub const INTPTR_WIDTH: u32 = 64;
+pub const UINTPTR_WIDTH: u32 = 64;
+pub const INTMAX_WIDTH: u32 = 64;
+pub const UINTMAX_WIDTH: u32 = 64;
+pub const PTRDIFF_WIDTH: u32 = 64;
+pub const SIG_ATOMIC_WIDTH: u32 = 32;
+pub const SIZE_WIDTH: u32 = 64;
+pub const WCHAR_WIDTH: u32 = 32;
+pub const WINT_WIDTH: u32 = 32;
 pub const __bool_true_false_are_defined: u32 = 1;
 pub const WHISPER_SAMPLE_RATE: u32 = 16000;
 pub const WHISPER_N_FFT: u32 = 400;
 pub const WHISPER_N_MEL: u32 = 80;
 pub const WHISPER_HOP_LENGTH: u32 = 160;
 pub const WHISPER_CHUNK_SIZE: u32 = 30;
+#[repr(C)]
+#[repr(align(16))]
+#[derive(Debug, Copy, Clone)]
+pub struct max_align_t {
+    pub __clang_max_align_nonce1: ::std::os::raw::c_longlong,
+    pub __bindgen_padding_0: u64,
+    pub __clang_max_align_nonce2: u128,
+}
+#[test]
+fn bindgen_test_layout_max_align_t() {
+    const UNINIT: ::std::mem::MaybeUninit<max_align_t> = ::std::mem::MaybeUninit::uninit();
+    let ptr = UNINIT.as_ptr();
+    assert_eq!(
+        ::std::mem::size_of::<max_align_t>(),
+        32usize,
+        concat!("Size of: ", stringify!(max_align_t))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<max_align_t>(),
+        16usize,
+        concat!("Alignment of ", stringify!(max_align_t))
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).__clang_max_align_nonce1) as usize - ptr as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(max_align_t),
+            "::",
+            stringify!(__clang_max_align_nonce1)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).__clang_max_align_nonce2) as usize - ptr as usize },
+        16usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(max_align_t),
+            "::",
+            stringify!(__clang_max_align_nonce2)
+        )
+    );
+}
 pub type __u_char = ::std::os::raw::c_uchar;
 pub type __u_short = ::std::os::raw::c_ushort;
 pub type __u_int = ::std::os::raw::c_uint;
@@ -170,6 +266,7 @@ pub type __id_t = ::std::os::raw::c_uint;
 pub type __time_t = ::std::os::raw::c_long;
 pub type __useconds_t = ::std::os::raw::c_uint;
 pub type __suseconds_t = ::std::os::raw::c_long;
+pub type __suseconds64_t = ::std::os::raw::c_long;
 pub type __daddr_t = ::std::os::raw::c_int;
 pub type __key_t = ::std::os::raw::c_int;
 pub type __clockid_t = ::std::os::raw::c_int;
@@ -220,6 +317,7 @@ pub struct whisper_token_data {
     pub id: whisper_token,
     pub tid: whisper_token,
     pub p: f32,
+    pub plog: f32,
     pub pt: f32,
     pub ptsum: f32,
     pub t0: i64,
@@ -271,8 +369,18 @@ fn bindgen_test_layout_whisper_token_data() {
         )
     );
     assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).pt) as usize - ptr as usize },
+        unsafe { ::std::ptr::addr_of!((*ptr).plog) as usize - ptr as usize },
         12usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(whisper_token_data),
+            "::",
+            stringify!(plog)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).pt) as usize - ptr as usize },
+        16usize,
         concat!(
             "Offset of field: ",
             stringify!(whisper_token_data),
@@ -282,7 +390,7 @@ fn bindgen_test_layout_whisper_token_data() {
     );
     assert_eq!(
         unsafe { ::std::ptr::addr_of!((*ptr).ptsum) as usize - ptr as usize },
-        16usize,
+        20usize,
         concat!(
             "Offset of field: ",
             stringify!(whisper_token_data),
@@ -321,8 +429,88 @@ fn bindgen_test_layout_whisper_token_data() {
         )
     );
 }
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct whisper_model_loader {
+    pub context: *mut ::std::os::raw::c_void,
+    pub read: ::std::option::Option<
+        unsafe extern "C" fn(
+            ctx: *mut ::std::os::raw::c_void,
+            output: *mut ::std::os::raw::c_void,
+            read_size: usize,
+        ) -> usize,
+    >,
+    pub eof: ::std::option::Option<unsafe extern "C" fn(ctx: *mut ::std::os::raw::c_void) -> bool>,
+    pub close: ::std::option::Option<unsafe extern "C" fn(ctx: *mut ::std::os::raw::c_void)>,
+}
+#[test]
+fn bindgen_test_layout_whisper_model_loader() {
+    const UNINIT: ::std::mem::MaybeUninit<whisper_model_loader> = ::std::mem::MaybeUninit::uninit();
+    let ptr = UNINIT.as_ptr();
+    assert_eq!(
+        ::std::mem::size_of::<whisper_model_loader>(),
+        32usize,
+        concat!("Size of: ", stringify!(whisper_model_loader))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<whisper_model_loader>(),
+        8usize,
+        concat!("Alignment of ", stringify!(whisper_model_loader))
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).context) as usize - ptr as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(whisper_model_loader),
+            "::",
+            stringify!(context)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).read) as usize - ptr as usize },
+        8usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(whisper_model_loader),
+            "::",
+            stringify!(read)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).eof) as usize - ptr as usize },
+        16usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(whisper_model_loader),
+            "::",
+            stringify!(eof)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).close) as usize - ptr as usize },
+        24usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(whisper_model_loader),
+            "::",
+            stringify!(close)
+        )
+    );
+}
 extern "C" {
-    pub fn whisper_init(path_model: *const ::std::os::raw::c_char) -> *mut whisper_context;
+    pub fn whisper_init_from_file(
+        path_model: *const ::std::os::raw::c_char,
+    ) -> *mut whisper_context;
+}
+extern "C" {
+    pub fn whisper_init_from_buffer(
+        buffer: *mut ::std::os::raw::c_void,
+        buffer_size: usize,
+    ) -> *mut whisper_context;
+}
+extern "C" {
+    pub fn whisper_init(loader: *mut whisper_model_loader) -> *mut whisper_context;
 }
 extern "C" {
     pub fn whisper_free(ctx: *mut whisper_context);
@@ -360,16 +548,29 @@ extern "C" {
     ) -> ::std::os::raw::c_int;
 }
 extern "C" {
-    pub fn whisper_sample_best(ctx: *mut whisper_context) -> whisper_token_data;
+    pub fn whisper_tokenize(
+        ctx: *mut whisper_context,
+        text: *const ::std::os::raw::c_char,
+        tokens: *mut whisper_token,
+        n_max_tokens: ::std::os::raw::c_int,
+    ) -> ::std::os::raw::c_int;
 }
 extern "C" {
-    pub fn whisper_sample_timestamp(
-        ctx: *mut whisper_context,
-        is_initial: bool,
-    ) -> whisper_token_data;
+    pub fn whisper_lang_max_id() -> ::std::os::raw::c_int;
 }
 extern "C" {
     pub fn whisper_lang_id(lang: *const ::std::os::raw::c_char) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn whisper_lang_str(id: ::std::os::raw::c_int) -> *const ::std::os::raw::c_char;
+}
+extern "C" {
+    pub fn whisper_lang_auto_detect(
+        ctx: *mut whisper_context,
+        offset_ms: ::std::os::raw::c_int,
+        n_threads: ::std::os::raw::c_int,
+        lang_probs: *mut f32,
+    ) -> ::std::os::raw::c_int;
 }
 extern "C" {
     pub fn whisper_n_len(ctx: *mut whisper_context) -> ::std::os::raw::c_int;
@@ -381,10 +582,13 @@ extern "C" {
     pub fn whisper_n_text_ctx(ctx: *mut whisper_context) -> ::std::os::raw::c_int;
 }
 extern "C" {
+    pub fn whisper_n_audio_ctx(ctx: *mut whisper_context) -> ::std::os::raw::c_int;
+}
+extern "C" {
     pub fn whisper_is_multilingual(ctx: *mut whisper_context) -> ::std::os::raw::c_int;
 }
 extern "C" {
-    pub fn whisper_get_probs(ctx: *mut whisper_context) -> *mut f32;
+    pub fn whisper_get_logits(ctx: *mut whisper_context) -> *mut f32;
 }
 extern "C" {
     pub fn whisper_token_to_str(
@@ -409,6 +613,12 @@ extern "C" {
 }
 extern "C" {
     pub fn whisper_token_beg(ctx: *mut whisper_context) -> whisper_token;
+}
+extern "C" {
+    pub fn whisper_token_lang(
+        ctx: *mut whisper_context,
+        lang_id: ::std::os::raw::c_int,
+    ) -> whisper_token;
 }
 extern "C" {
     pub fn whisper_token_translate() -> whisper_token;
@@ -464,6 +674,14 @@ pub struct whisper_full_params {
     pub prompt_tokens: *const whisper_token,
     pub prompt_n_tokens: ::std::os::raw::c_int,
     pub language: *const ::std::os::raw::c_char,
+    pub suppress_blank: bool,
+    pub temperature: f32,
+    pub max_initial_ts: f32,
+    pub length_penalty: f32,
+    pub temperature_inc: f32,
+    pub entropy_thold: f32,
+    pub logprob_thold: f32,
+    pub no_speech_thold: f32,
     pub greedy: whisper_full_params__bindgen_ty_1,
     pub beam_search: whisper_full_params__bindgen_ty_2,
     pub new_segment_callback: whisper_new_segment_callback,
@@ -474,7 +692,7 @@ pub struct whisper_full_params {
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct whisper_full_params__bindgen_ty_1 {
-    pub n_past: ::std::os::raw::c_int,
+    pub best_of: ::std::os::raw::c_int,
 }
 #[test]
 fn bindgen_test_layout_whisper_full_params__bindgen_ty_1() {
@@ -495,22 +713,21 @@ fn bindgen_test_layout_whisper_full_params__bindgen_ty_1() {
         )
     );
     assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).n_past) as usize - ptr as usize },
+        unsafe { ::std::ptr::addr_of!((*ptr).best_of) as usize - ptr as usize },
         0usize,
         concat!(
             "Offset of field: ",
             stringify!(whisper_full_params__bindgen_ty_1),
             "::",
-            stringify!(n_past)
+            stringify!(best_of)
         )
     );
 }
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct whisper_full_params__bindgen_ty_2 {
-    pub n_past: ::std::os::raw::c_int,
-    pub beam_width: ::std::os::raw::c_int,
-    pub n_best: ::std::os::raw::c_int,
+    pub beam_size: ::std::os::raw::c_int,
+    pub patience: f32,
 }
 #[test]
 fn bindgen_test_layout_whisper_full_params__bindgen_ty_2() {
@@ -519,7 +736,7 @@ fn bindgen_test_layout_whisper_full_params__bindgen_ty_2() {
     let ptr = UNINIT.as_ptr();
     assert_eq!(
         ::std::mem::size_of::<whisper_full_params__bindgen_ty_2>(),
-        12usize,
+        8usize,
         concat!("Size of: ", stringify!(whisper_full_params__bindgen_ty_2))
     );
     assert_eq!(
@@ -531,33 +748,23 @@ fn bindgen_test_layout_whisper_full_params__bindgen_ty_2() {
         )
     );
     assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).n_past) as usize - ptr as usize },
+        unsafe { ::std::ptr::addr_of!((*ptr).beam_size) as usize - ptr as usize },
         0usize,
         concat!(
             "Offset of field: ",
             stringify!(whisper_full_params__bindgen_ty_2),
             "::",
-            stringify!(n_past)
+            stringify!(beam_size)
         )
     );
     assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).beam_width) as usize - ptr as usize },
+        unsafe { ::std::ptr::addr_of!((*ptr).patience) as usize - ptr as usize },
         4usize,
         concat!(
             "Offset of field: ",
             stringify!(whisper_full_params__bindgen_ty_2),
             "::",
-            stringify!(beam_width)
-        )
-    );
-    assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).n_best) as usize - ptr as usize },
-        8usize,
-        concat!(
-            "Offset of field: ",
-            stringify!(whisper_full_params__bindgen_ty_2),
-            "::",
-            stringify!(n_best)
+            stringify!(patience)
         )
     );
 }
@@ -567,7 +774,7 @@ fn bindgen_test_layout_whisper_full_params() {
     let ptr = UNINIT.as_ptr();
     assert_eq!(
         ::std::mem::size_of::<whisper_full_params>(),
-        128usize,
+        160usize,
         concat!("Size of: ", stringify!(whisper_full_params))
     );
     assert_eq!(
@@ -796,8 +1003,88 @@ fn bindgen_test_layout_whisper_full_params() {
         )
     );
     assert_eq!(
-        unsafe { ::std::ptr::addr_of!((*ptr).greedy) as usize - ptr as usize },
+        unsafe { ::std::ptr::addr_of!((*ptr).suppress_blank) as usize - ptr as usize },
         80usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(whisper_full_params),
+            "::",
+            stringify!(suppress_blank)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).temperature) as usize - ptr as usize },
+        84usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(whisper_full_params),
+            "::",
+            stringify!(temperature)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).max_initial_ts) as usize - ptr as usize },
+        88usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(whisper_full_params),
+            "::",
+            stringify!(max_initial_ts)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).length_penalty) as usize - ptr as usize },
+        92usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(whisper_full_params),
+            "::",
+            stringify!(length_penalty)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).temperature_inc) as usize - ptr as usize },
+        96usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(whisper_full_params),
+            "::",
+            stringify!(temperature_inc)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).entropy_thold) as usize - ptr as usize },
+        100usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(whisper_full_params),
+            "::",
+            stringify!(entropy_thold)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).logprob_thold) as usize - ptr as usize },
+        104usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(whisper_full_params),
+            "::",
+            stringify!(logprob_thold)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).no_speech_thold) as usize - ptr as usize },
+        108usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(whisper_full_params),
+            "::",
+            stringify!(no_speech_thold)
+        )
+    );
+    assert_eq!(
+        unsafe { ::std::ptr::addr_of!((*ptr).greedy) as usize - ptr as usize },
+        112usize,
         concat!(
             "Offset of field: ",
             stringify!(whisper_full_params),
@@ -807,7 +1094,7 @@ fn bindgen_test_layout_whisper_full_params() {
     );
     assert_eq!(
         unsafe { ::std::ptr::addr_of!((*ptr).beam_search) as usize - ptr as usize },
-        84usize,
+        116usize,
         concat!(
             "Offset of field: ",
             stringify!(whisper_full_params),
@@ -817,7 +1104,7 @@ fn bindgen_test_layout_whisper_full_params() {
     );
     assert_eq!(
         unsafe { ::std::ptr::addr_of!((*ptr).new_segment_callback) as usize - ptr as usize },
-        96usize,
+        128usize,
         concat!(
             "Offset of field: ",
             stringify!(whisper_full_params),
@@ -829,7 +1116,7 @@ fn bindgen_test_layout_whisper_full_params() {
         unsafe {
             ::std::ptr::addr_of!((*ptr).new_segment_callback_user_data) as usize - ptr as usize
         },
-        104usize,
+        136usize,
         concat!(
             "Offset of field: ",
             stringify!(whisper_full_params),
@@ -839,7 +1126,7 @@ fn bindgen_test_layout_whisper_full_params() {
     );
     assert_eq!(
         unsafe { ::std::ptr::addr_of!((*ptr).encoder_begin_callback) as usize - ptr as usize },
-        112usize,
+        144usize,
         concat!(
             "Offset of field: ",
             stringify!(whisper_full_params),
@@ -851,7 +1138,7 @@ fn bindgen_test_layout_whisper_full_params() {
         unsafe {
             ::std::ptr::addr_of!((*ptr).encoder_begin_callback_user_data) as usize - ptr as usize
         },
-        120usize,
+        152usize,
         concat!(
             "Offset of field: ",
             stringify!(whisper_full_params),
@@ -934,4 +1221,11 @@ extern "C" {
         i_segment: ::std::os::raw::c_int,
         i_token: ::std::os::raw::c_int,
     ) -> f32;
+}
+extern "C" {
+    #[doc = ""]
+    pub fn whisper_bench_memcpy(n_threads: ::std::os::raw::c_int) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn whisper_bench_ggml_mul_mat(n_threads: ::std::os::raw::c_int) -> ::std::os::raw::c_int;
 }

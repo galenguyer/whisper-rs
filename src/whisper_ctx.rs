@@ -31,7 +31,7 @@ impl WhisperContext {
     /// `struct whisper_context * whisper_init(const char * path_model);`
     pub fn new(path: &str) -> Result<Self, WhisperError> {
         let path_cstr = CString::new(path)?;
-        let ctx = unsafe { whisper_rs_sys::whisper_init(path_cstr.as_ptr()) };
+        let ctx = unsafe { whisper_rs_sys::whisper_init_from_file(path_cstr.as_ptr()) };
         if ctx.is_null() {
             Err(WhisperError::InitError)
         } else {
@@ -202,13 +202,13 @@ impl WhisperContext {
     ///
     /// # C++ equivalent
     /// `whisper_token whisper_sample_best(struct whisper_context * ctx, bool need_timestamp)`
-    pub fn sample_best(&mut self) -> Result<WhisperTokenData, WhisperError> {
-        if !self.decode_once {
-            return Err(WhisperError::DecodeNotComplete);
-        }
-        let ret = unsafe { whisper_rs_sys::whisper_sample_best(self.ctx) };
-        Ok(ret)
-    }
+    // pub fn sample_best(&mut self) -> Result<WhisperTokenData, WhisperError> {
+    //     if !self.decode_once {
+    //         return Err(WhisperError::DecodeNotComplete);
+    //     }
+    //     let ret = unsafe { whisper_rs_sys::whisper_sample_best(self.ctx) };
+    //     Ok(ret)
+    // }
 
     /// Return the token with the most probable timestamp.
     /// Make sure to call [WhisperContext::decode] first.
@@ -218,13 +218,13 @@ impl WhisperContext {
     ///
     /// # C++ equivalent
     /// `whisper_token whisper_sample_timestamp(struct whisper_context * ctx)`
-    pub fn sample_timestamp(&mut self, is_initial: bool) -> Result<WhisperTokenData, WhisperError> {
-        if !self.decode_once {
-            return Err(WhisperError::DecodeNotComplete);
-        }
-        let ret = unsafe { whisper_rs_sys::whisper_sample_timestamp(self.ctx, is_initial) };
-        Ok(ret)
-    }
+    // pub fn sample_timestamp(&mut self, is_initial: bool) -> Result<WhisperTokenData, WhisperError> {
+    //     if !self.decode_once {
+    //         return Err(WhisperError::DecodeNotComplete);
+    //     }
+    //     let ret = unsafe { whisper_rs_sys::whisper_sample_timestamp(self.ctx, is_initial) };
+    //     Ok(ret)
+    // }
 
     // model attributes
     /// Get the mel spectrogram length.
@@ -280,16 +280,16 @@ impl WhisperContext {
     ///
     /// # C++ equivalent
     /// `float * whisper_get_probs(struct whisper_context * ctx)`
-    pub fn get_probs(&mut self) -> Result<*const f32, WhisperError> {
-        if !self.decode_once {
-            return Err(WhisperError::DecodeNotComplete);
-        }
-        let ret = unsafe { whisper_rs_sys::whisper_get_probs(self.ctx) };
-        if ret.is_null() {
-            return Err(WhisperError::NullPointer);
-        }
-        Ok(ret)
-    }
+    // pub fn get_probs(&mut self) -> Result<*const f32, WhisperError> {
+    //     if !self.decode_once {
+    //         return Err(WhisperError::DecodeNotComplete);
+    //     }
+    //     let ret = unsafe { whisper_rs_sys::whisper_get_probs(self.ctx) };
+    //     if ret.is_null() {
+    //         return Err(WhisperError::NullPointer);
+    //     }
+    //     Ok(ret)
+    // }
 
     /// Convert a token ID to a string.
     ///
@@ -398,7 +398,7 @@ impl WhisperContext {
     ///
     /// # C++ equivalent
     /// `int whisper_full(struct whisper_context * ctx, struct whisper_full_params params, const float * samples, int n_samples)`
-    pub fn full(&mut self, params: FullParams, data: &[f32]) -> Result<c_int, WhisperError> {
+    pub fn full(&mut self, params: &FullParams, data: &[f32]) -> Result<c_int, WhisperError> {
         let ret = unsafe {
             whisper_rs_sys::whisper_full(self.ctx, params.fp, data.as_ptr(), data.len() as c_int)
         };
@@ -432,7 +432,7 @@ impl WhisperContext {
     /// `int whisper_full_parallel(struct whisper_context * ctx, struct whisper_full_params params, const float * samples, int n_samples, int n_processors)`
     pub fn full_parallel(
         &mut self,
-        params: FullParams,
+        params: &FullParams,
         data: &[f32],
         n_processors: c_int,
     ) -> Result<c_int, WhisperError> {

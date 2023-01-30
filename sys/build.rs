@@ -28,6 +28,11 @@ fn main() {
         let bindings = bindgen::Builder::default()
             .header("wrapper.h")
             .clang_arg("-I./whisper.cpp")
+            .clang_arg("-xc++")
+            .clang_arg("-std=c++11")
+//            .clang_arg("-lopenblas")
+//            .clang_arg("-lcblas")
+//            .clang_arg("-DGGML_USE_OPENBLAS=1")
             .parse_callbacks(Box::new(bindgen::CargoCallbacks))
             .generate();
 
